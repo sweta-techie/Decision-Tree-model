@@ -3,7 +3,8 @@
 #program to print a decision tree
 
 import math
-import random 
+import secrets
+
 trrt = .8
 class C45:
 
@@ -34,7 +35,7 @@ class C45:
 				row = [x.strip() for x in line.split(",")]
 				
 				if row != [] or row != [""]:
-					if random.random() < trrt:
+					if secrets.SystemRandom().random() < trrt:
 						sf.data.append(row)
 					else:
 						sf.td.append(row)
