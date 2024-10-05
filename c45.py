@@ -21,7 +21,7 @@ class C45:
 # function to retreive data
 	def data_retrieve(sf):
 		with open(sf.fpn, "r") as file:
-			cls = file.readline()
+			cls = file.readline(5_000_000)
 			sf.cls = [x.strip() for x in cls.split(",")]
 			for line in file:
 				[attbe, values] = [x.strip() for x in line.split(":")]
